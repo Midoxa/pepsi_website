@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: #0162be;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+.navbar .logo img {
+  width: 70px;
+  margin-left: 8rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  padding: 0 3rem;
+  color: white;
+  text-transform: capitalize;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+}
+.left {
+  width: 700px;
+  animation: move-right 1s ease-out;
+  margin: 0 5rem;
+}
+.left h1,
+button,
+p {
+  margin-left: 2rem;
+  padding: 0.5rem 0rem;
+  color: white;
+}
+.left button {
+  margin-top: 1rem;
+  background-color: red;
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.left span {
+  font-size: 60px;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  animation: move-left 1s ease-out;
+}
+
+.right img {
+  width: 300px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem;
+  gap: 1.5rem;
+  font-size: 40px;
+  color: white;
+}
+/* Animations */
+
+@keyframes move-left {
+  from {
+    transform: translateX(400px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+/* 3 pepsi */
+
+.b3 {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.b3 img {
+  width: 90px;
+  display: inline-block;
+  position: relative;
+  bottom: 60px;
+  animation: move-up 1s ease-out;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Hover */
+.right img:hover {
+  scale: 1.1;
+  transition: all 1s;
+}
